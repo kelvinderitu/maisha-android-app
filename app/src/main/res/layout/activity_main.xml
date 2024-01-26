@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical">
+
     <ProgressBar
         android:layout_width="match_parent"
         android:layout_height="8dp"
@@ -21,16 +22,7 @@
         android:layout_height="match_parent"
         android:id="@+id/myWebView"
         />
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="20dp"
-        android:src="@mipmap/ic_launcher"
-        android:visibility="gone"/>
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -69,6 +61,7 @@
 
 
     </RelativeLayout>
+
 
 
 </LinearLayout>

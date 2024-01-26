@@ -2,6 +2,7 @@ package com.example.maishacarparkingshades;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
@@ -28,7 +29,7 @@ import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity {
     WebView webView;
-    private String webUrl = "https://github.com";
+    private String webUrl = "https://aa93-102-217-157-9.ngrok-free.app/maishashades/main/";
     ProgressBar progressBarWeb;
     ProgressDialog progressDialog;
     RelativeLayout relativeLayout;
@@ -60,10 +61,14 @@ public class MainActivity extends AppCompatActivity {
         btnNoInternetConnection = (Button) findViewById(R.id.btnNoConnection);
         relativeLayout = (RelativeLayout) findViewById(R.id.relativeLayout);
 
+
         checkConnection();
 
-
-
+            //Webview stuff
+            webView = findViewById(R.id.myWebView);
+            webView.getSettings().setJavaScriptEnabled(true);
+            webView.getSettings().setDomStorageEnabled(true);
+            webView.setOverScrollMode(WebView.OVER_SCROLL_NEVER);
 
 
         webView.setWebViewClient(new WebViewClient() {
@@ -148,6 +153,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
 
 
 
